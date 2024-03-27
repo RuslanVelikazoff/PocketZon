@@ -13,8 +13,12 @@ public class ScoreUI : MonoBehaviour
     [SerializeField] 
     private TextMeshProUGUI scoreText;
 
+    [SerializeField] 
+    private StartData data;
+
     private void Start()
     {
+        record = data._record;
         SetRecordText();
         SetScoreText();
     }
@@ -26,6 +30,7 @@ public class ScoreUI : MonoBehaviour
         if (score > record)
         {
             record = score;
+            data._record = record;
             SetScoreText();
             SetRecordText();
         }

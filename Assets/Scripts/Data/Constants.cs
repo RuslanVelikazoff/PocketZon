@@ -11,5 +11,7 @@ namespace Constants
         public const string TOP = "Top";
 
         public const string SIDE = "Side";
+
+        public const string SAVEKEY = "mainSave";
     }
 }

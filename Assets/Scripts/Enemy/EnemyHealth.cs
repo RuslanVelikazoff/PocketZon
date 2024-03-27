@@ -11,8 +11,11 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] 
     private FloatingHealthBar healthBar;
 
+    private ScoreUI scoreUI;
+
     private void Start()
     {
+        scoreUI = FindObjectOfType<ScoreUI>();
         healthBar.UpdateHealthBar(currentHealth, maxHealh);
     }
 
@@ -28,6 +31,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(this.gameObject);
+            scoreUI.AddScore();
         }
     }
 }

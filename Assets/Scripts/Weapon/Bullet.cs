@@ -3,7 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField]
-    private float speed;
+    private float speed = 4;
     [SerializeField] 
     private float lifeTime;
     
@@ -20,9 +20,8 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag(Constants.Data.ENEMY))
         {
-            Debug.Log("Kill");
+            other.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
             Destroy(this.gameObject);
-            Destroy(other.gameObject);
         }
 
         if (other.gameObject.CompareTag(Constants.Data.BORDER))

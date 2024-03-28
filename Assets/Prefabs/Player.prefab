@@ -635,9 +635,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7648700186245154801}
   - component: {fileID: 5893896128744551510}
+  - component: {fileID: 7071213619422937351}
+  - component: {fileID: 2637388341794713272}
   - component: {fileID: 550227006}
   - component: {fileID: 550227009}
-  - component: {fileID: 7071213619422937351}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -683,6 +684,40 @@ MonoBehaviour:
   speed: 4
   joystick: {fileID: 0}
   rigidbody: {fileID: 550227006}
+--- !u!114 &7071213619422937351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6541653841363992027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b84fb57bb2053a4dadf15cb009821d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 5
+  maxHealh: 5
+  healthBar: {fileID: 2026810332941040880}
+  losePanel: {fileID: 0}
+--- !u!114 &2637388341794713272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6541653841363992027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0d4870f34cd6348a4145443866ae21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFull: 000000
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!50 &550227006
 Rigidbody2D:
   serializedVersion: 4
@@ -730,21 +765,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7988622, y: 2.1718462}
   m_EdgeRadius: 0
---- !u!114 &7071213619422937351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6541653841363992027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b84fb57bb2053a4dadf15cb009821d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 5
-  maxHealh: 5
-  healthBar: {fileID: 2026810332941040880}
 --- !u!1 &7219819611019228631
 GameObject:
   m_ObjectHideFlags: 0

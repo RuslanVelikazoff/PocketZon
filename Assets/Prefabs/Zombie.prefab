@@ -981,6 +981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 3
   maxHealh: 3
+  dropPrefab: {fileID: 8652762632268826701, guid: 1ecc9ccdecf12a34abb87edeca0ad0b3, type: 3}
   healthBar: {fileID: 1745661546253747867}
 --- !u!61 &1745661546610053130
 BoxCollider2D:

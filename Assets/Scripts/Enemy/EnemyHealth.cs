@@ -9,6 +9,9 @@ public class EnemyHealth : MonoBehaviour
     private float maxHealh = 3;
 
     [SerializeField] 
+    private GameObject dropPrefab;
+    
+    [SerializeField] 
     private FloatingHealthBar healthBar;
 
     private ScoreUI scoreUI;
@@ -30,6 +33,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            Instantiate(dropPrefab, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
             scoreUI.AddScore();
         }
